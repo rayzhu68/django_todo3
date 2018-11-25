@@ -13,17 +13,25 @@
             <tr>
                 {% if item.done %}
                 <td><strike>{{ item.name }}</strike></td>
-                
                 {% else %}
-                <td>{{ item.name }}</td><br>
+                <td>{{ item.name }}</td>
                 {% endif %}
+                <td>
+                    <form method="POST" action="toggle/{{ item.id }}">{% csrf_token %}<input type="submit" value="Toggle"/></form>
+                </td>
+                <td>
+                    <form method="GET" action="edit/{{ item.id }}"><input type="submit" value="Edit"/></form>
+                </td>
             </tr>
+            {% empty %}
+            <h5>You have nothing to do.</h5>
             {% endfor %}
             
-        </table><br>
+            
+        </table>
+        <br>
         
         <a href="add">Add An Item</a>
-        
     </body>
 
 </html>

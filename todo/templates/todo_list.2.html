@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital=scale">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Things I need to do ......</h1>
+        
+        <table>
+            
+    	    {% for item in items %}
+    	    <tr>
+        		  {% if item.done %}
+        		  <td><strike>{{ item.name }}</strike></td>
+        		  {% else %}
+        		  <td>{{ item.name }}</td>
+        		  {% endif %}
+    	    </tr>	
+    	    
+    	    {% empty %}
+            <h6>You have nothing to do</h6>
+    	    {% endfor %}
+        </talbe>
+        <br>
+        <div></div>
+        <h2>test position</h2>
+        <div>
+             <a href="add">Add An Item</a>
+        </div>
+       <h2>test position low</h2>
+        <br>
+    </body>
+
+</html>
