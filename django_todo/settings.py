@@ -27,7 +27,7 @@ SECRET_KEY = 'dh=%75-ict)g0f(+099ri42s&g*b48=oy89x17ed+%&^a!ss74'
 DEBUG = True
 
 ALLOWED_HOSTS = ['django-todo3-rayzhu247.c9users.io',
-                'https://django-todo3.herokuapp.com'
+                'django-todo3.herokuapp.com'
                 ]
 
 
