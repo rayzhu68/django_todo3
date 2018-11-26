@@ -4,5 +4,5 @@ from .models import Item
 # Register your models here.
 admin.site.register(Item)
 
-def __str__(self):
-    return self.name
+
+    
