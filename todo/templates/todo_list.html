@@ -11,11 +11,18 @@
         
         <table>
             {% for item in items %}
-            {% if item.done %}
-            <strike>{{ item.name }}</strike><br>
-            {% else %}
-            {{ item.name }}<br>
-            {% endif %}
+            <tr>
+                {% if item.done %}
+                <td><strike>{{ item.name }}</strike></td>
+                {% else %}
+                <td>{{ item.name }}</td>
+                {% endif %}
+                <td>
+                    <form method="GET" action="edit/{{item.id}}">{% csrf_token %}<input type="submit" value="edit"/></form>
+                </td>
+            </tr>    
+            {% empty %}
+            <p>You have nothing to do.</p>
             {% endfor %}
         </table><br>
         <a href="add">Add An Item</a>
