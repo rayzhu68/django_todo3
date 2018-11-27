@@ -30,6 +30,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', 'dh=%75-ict)g0f(+099ri42s&g*b48=oy89x17ed+%&^a!ss74'
                            )
 # SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = development
 
 #ALLOWED_HOSTS = ['django-todo3-rayzhu247.c9users.io',
